@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <el-container class="admin-shell">
     <el-aside class="admin-sidebar" width="232px">
       <div class="brand">
@@ -15,6 +15,7 @@
         <el-menu-item index="/ai">AI 中心</el-menu-item>
         <el-menu-item index="/publish">自动发布</el-menu-item>
         <el-menu-item index="/collect">自动采集</el-menu-item>
+        <el-menu-item index="/api-center">开放 API</el-menu-item>
         <el-menu-item index="/risk">风控审计</el-menu-item>
         <el-menu-item index="/settings">系统设置</el-menu-item>
       </el-menu>

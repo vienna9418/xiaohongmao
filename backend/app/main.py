@@ -3,10 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes.accounts import router as accounts_router
 from app.api.routes.ai import router as ai_router
+from app.api.routes.api_keys import router as api_keys_router
 from app.api.routes.auth import router as auth_router
 from app.api.routes.collect import router as collect_router
 from app.api.routes.contents import router as contents_router
 from app.api.routes.health import router as health_router
+from app.api.routes.public_api import router as public_api_router
 from app.api.routes.publish import router as publish_router
 from app.core.config import settings
 
@@ -34,6 +36,8 @@ def create_app() -> FastAPI:
     app.include_router(ai_router)
     app.include_router(publish_router)
     app.include_router(collect_router)
+    app.include_router(api_keys_router)
+    app.include_router(public_api_router)
     return app
 
 

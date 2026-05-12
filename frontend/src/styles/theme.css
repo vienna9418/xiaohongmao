@@ -275,3 +275,20 @@ body {
   display: grid;
   gap: 16px;
 }
+
+.api-center {
+  display: grid;
+  gap: 16px;
+}
+
+.code-box {
+  padding: 16px;
+  overflow: auto;
+  border-radius: 16px;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.secret-alert {
+  margin-top: 20px;
+}
