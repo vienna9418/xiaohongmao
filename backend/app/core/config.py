@@ -10,6 +10,10 @@ class Settings(BaseSettings):
     debug: bool = True
     cors_origins: list[str] = Field(default_factory=lambda: ["http://localhost:5173"])
 
+    secret_key: str = "change-me-in-production"
+    jwt_algorithm: str = "HS256"
+    access_token_expire_minutes: int = 60 * 8
+
     database_url: str = "postgresql+asyncpg://xiaohongmao:xiaohongmao_dev@localhost:5432/xiaohongmao"
     redis_url: str = "redis://localhost:6379/0"
     minio_endpoint: str = "localhost:9000"
