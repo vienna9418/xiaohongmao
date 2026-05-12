@@ -270,3 +270,8 @@ body {
   display: grid;
   gap: 16px;
 }
+
+.collect-console {
+  display: grid;
+  gap: 16px;
+}

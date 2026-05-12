@@ -9,6 +9,7 @@ import DashboardView from "@/views/dashboard/DashboardView.vue";
 import PlaceholderView from "@/views/PlaceholderView.vue";
 import AiCenterView from "@/views/ai/AiCenterView.vue";
 import PublishConsoleView from "@/views/publish/PublishConsoleView.vue";
+import CollectConsoleView from "@/views/collect/CollectConsoleView.vue";
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -23,7 +24,7 @@ export const router = createRouter({
         { path: "contents", name: "contents", component: ContentsView, meta: { title: "内容工厂" } },
         { path: "ai", name: "ai", component: AiCenterView, meta: { title: "AI 中心" } },
         { path: "publish", name: "publish", component: PublishConsoleView, meta: { title: "自动发布" } },
-        { path: "collect", name: "collect", component: PlaceholderView, meta: { title: "自动采集" } },
+        { path: "collect", name: "collect", component: CollectConsoleView, meta: { title: "自动采集" } },
         { path: "risk", name: "risk", component: PlaceholderView, meta: { title: "风控审计" } },
         { path: "settings", name: "settings", component: PlaceholderView, meta: { title: "系统设置" } },
       ],
@@ -41,5 +42,6 @@ router.beforeEach((to) => {
   }
   return true;
 });
+
 
 

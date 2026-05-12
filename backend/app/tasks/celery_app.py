@@ -6,7 +6,7 @@ celery_app = Celery(
     "xiaohongmao",
     broker=settings.redis_url,
     backend=settings.redis_url,
-    include=["app.tasks.publish_tasks"],
+    include=["app.tasks.publish_tasks", "app.tasks.collect_tasks"],
 )
 
 celery_app.conf.update(
