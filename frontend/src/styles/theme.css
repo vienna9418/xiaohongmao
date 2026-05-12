@@ -265,3 +265,8 @@ body {
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+.publish-console {
+  display: grid;
+  gap: 16px;
+}
