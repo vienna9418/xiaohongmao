@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <el-container class="admin-shell">
     <el-aside class="admin-sidebar" width="232px">
       <div class="brand">
@@ -29,6 +29,7 @@
         <div class="header-actions">
           <el-input placeholder="搜索账号 / 内容 / 任务" class="global-search" />
           <el-button type="primary">新建内容</el-button>
+          <el-button @click="logout">退出</el-button>
         </div>
       </el-header>
       <el-main class="admin-main">
@@ -40,8 +41,17 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
+
+import { useAuthStore } from "@/stores/auth";
 
 const route = useRoute();
+const router = useRouter();
+const auth = useAuthStore();
 const pageTitle = computed(() => String(route.meta.title ?? "工作台"));
+
+async function logout() {
+  auth.logout();
+  await router.push({ name: "login" });
+}
 </script>
